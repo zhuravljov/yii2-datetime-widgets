@@ -11,13 +11,13 @@ use yii\web\AssetBundle;
  */
 class DateTimePickerAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/zhuravljov/yii2-datetimepicker-widget/assets';
+    public $sourcePath = '@vendor/zhuravljov/yii2-datetime-widgets/assets';
 	public $js = [
 		'js/bootstrap-datetimepicker.js',
 		'js/bootstrap-datetimepicker.i18n.js',
 	];
 	public $css = [
-		'css/bootstrap-datetimepicker.css',
+		'css/bootstrap3-datetimepicker.css',
 	];
 	public $depends = [
         'yii\web\JqueryAsset',

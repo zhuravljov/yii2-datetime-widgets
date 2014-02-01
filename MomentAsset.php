@@ -13,15 +13,15 @@ use yii\web\AssetBundle;
  */
 class MomentAsset extends AssetBundle
 {
-	public $sourcePath = '@vendor/zhuravljov/yii2-daterangepicker-widget/assets';
+	public $sourcePath = '@vendor/zhuravljov/yii2-datetime-widgets/assets';
 
 	public function init()
 	{
 		parent::init();
 		if (YII_DEBUG) {
-			$this->js = ['js/moment/moment.js', 'js/moment/langs.js'];
+			$this->js = ['js/moment.js', 'js/moment.langs.js'];
 		} else {
-			$this->js = ['js/moment/moment-with-langs.min.js'];
+			$this->js = ['js/moment-with-langs.min.js'];
 		}
 	}
 }
