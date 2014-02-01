@@ -17,6 +17,8 @@ to the require section of your application's `composer.json` file.
 DatePicker
 ----------
 
+[Demo](http://eternicode.github.io/bootstrap-datepicker/) from the bootstrap-datepicker plugin website.
+
 ### Usage
 
 ```php
@@ -35,8 +37,13 @@ use zhuravljov\widgets\DatePicker;
 ]) ?>
 ```
 
+For more details, please check the [bootstrap-datepicker plugin](http://bootstrap-datepicker.readthedocs.org/en/latest/) website.
+
 DateTimePicker
 --------------
+
+[Demo](http://www.malot.fr/bootstrap-datetimepicker/demo.php) from the bootstrap-datetimepicker plugin website.
+
 
 ### Usage
 
@@ -55,8 +62,12 @@ use zhuravljov\widgets\DateTimePicker;
 ]) ?>
 ```
 
+For more details, please check the [bootstrap-datetimepicker plugin](http://www.malot.fr/bootstrap-datetimepicker/index.php) website.
+
 DateRangePicker
 ---------------
+
+[Demo](http://www.dangrossman.info/2012/08/20/a-date-range-picker-for-twitter-bootstrap/) from the bootstrap-daterangepicker plugin website.
 
 ### Usage
 
@@ -66,7 +77,7 @@ use zhuravljov\widgets\DateRangePicker;
 
 ```php
 <?= $form->field($model, 'actual_time')->widget(DateRangePicker::className(), [
-    'options' => ['class' => 'form-control','autocomplete' => 'off'],
+    'options' => ['class' => 'form-control'],
     'clientOptions' => [
         'ranges' => [
             'Today' => [
@@ -83,3 +94,5 @@ use zhuravljov\widgets\DateRangePicker;
     ],
 ]) ?>
 ```
+
+For more details, please check the [bootstrap-daterangepicker plugin](https://github.com/dangrossman/bootstrap-daterangepicker) repo.
