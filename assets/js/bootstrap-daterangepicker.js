@@ -439,7 +439,7 @@
 
         updateInputText: function() {
             if (this.element.is('input'))
-                this.element.val(this.startDate.format(this.format) + this.separator + this.endDate.format(this.format));
+                this.element.val(this.startDate.format(this.format) + this.separator + this.endDate.format(this.format)).trigger('change');
         },
 
         clickRange: function (e) {
