@@ -8,6 +8,8 @@ use yii\web\AssetBundle;
  * Class DateRangePickerAsset
  *
  * @author Roman Zhuravlev <zhuravljov@gmail.com>
+ *
+ * @see https://github.com/dangrossman/bootstrap-daterangepicker
  */
 class DateRangePickerAsset extends AssetBundle
 {
