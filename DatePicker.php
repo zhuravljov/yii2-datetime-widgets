@@ -13,43 +13,42 @@ use yii\widgets\InputWidget;
  */
 class DatePicker extends InputWidget
 {
-	/**
-	 * @var array the HTML attributes for the input tag.
-	 */
-	public $options = [];
-	/**
-	 * @var array options for datepicker
-	 */
-	public $clientOptions = [];
-	/**
-	 * @var array events for datepicker
-	 */
-	public $clientEvents = [];
+    /**
+     * @var array the HTML attributes for the input tag.
+     */
+    public $options = [];
+    /**
+     * @var array options for datepicker
+     */
+    public $clientOptions = [];
+    /**
+     * @var array events for datepicker
+     */
+    public $clientEvents = [];
 
-	public function init()
-	{
-		parent::init();
-		if (!isset($this->options['id'])) {
-			$this->options['id'] = $this->hasModel() ? Html::getInputId($this->model, $this->attribute) : $this->getId();
-		}
-	}
+    public function init()
+    {
+        parent::init();
+        if (!isset($this->options['id'])) {
+            $this->options['id'] = $this->hasModel() ? Html::getInputId($this->model, $this->attribute) : $this->getId();
+        }
+    }
 
-	public function run()
-	{
-		if ($this->hasModel()) {
-			echo Html::activeTextInput($this->model, $this->attribute, $this->options);
-		} else {
-			echo Html::textInput($this->name, $this->value, $this->options);
-		}
-		/** @var \yii\web\View $view */
-		$view = $this->getView();
-		DatePickerAsset::register($view);
-		$id = $this->options['id'];
-		$options = empty($this->clientOptions) ? '' : Json::encode($this->clientOptions);
-		$js = "jQuery('#$id').datepicker($options)";
-		foreach ($this->clientEvents as $event => $handler) {
-			$js .= ".on('$event', $handler)";
-		}
-		$view->registerJs($js . ';');
-	}
+    public function run()
+    {
+        if ($this->hasModel()) {
+            echo Html::activeTextInput($this->model, $this->attribute, $this->options);
+        } else {
+            echo Html::textInput($this->name, $this->value, $this->options);
+        }
+        $view = $this->getView();
+        DatePickerAsset::register($view);
+        $id = $this->options['id'];
+        $options = empty($this->clientOptions) ? '' : Json::encode($this->clientOptions);
+        $js = "jQuery('#$id').datepicker($options)";
+        foreach ($this->clientEvents as $event => $handler) {
+            $js .= ".on('$event', $handler)";
+        }
+        $view->registerJs($js . ';');
+    }
 }

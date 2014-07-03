@@ -11,16 +11,16 @@ use yii\web\AssetBundle;
  */
 class DateRangePickerAsset extends AssetBundle
 {
-	public $sourcePath = '@vendor/zhuravljov/yii2-datetime-widgets/assets';
-	public $js = [
-		'js/bootstrap-daterangepicker.js'
-	];
-	public $css = [
-		'css/bootstrap3-daterangepicker.css',
-	];
-	public $depends = [
-		'yii\web\JqueryAsset',
-		'yii\bootstrap\BootstrapAsset',
-		'zhuravljov\widgets\MomentAsset',
-	];
+    public $sourcePath = '@vendor/zhuravljov/yii2-datetime-widgets/assets';
+    public $js = [
+        'js/bootstrap-daterangepicker.js'
+    ];
+    public $css = [
+        'css/bootstrap3-daterangepicker.css',
+    ];
+    public $depends = [
+        'yii\web\JqueryAsset',
+        'yii\bootstrap\BootstrapAsset',
+        'zhuravljov\widgets\MomentAsset',
+    ];
 }
