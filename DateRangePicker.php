@@ -21,6 +21,10 @@ class DateRangePicker extends InputWidget
      * @var array options for daterangepicker
      */
     public $clientOptions = [];
+    /**
+     * @var array events for daterangepicker
+     */
+    public $clientEvents = [];
 
     public function init()
     {
@@ -41,6 +45,10 @@ class DateRangePicker extends InputWidget
         DateRangePickerAsset::register($view);
         $id = $this->options['id'];
         $options = empty($this->clientOptions) ? '' : Json::encode($this->clientOptions);
-        $view->registerJs("jQuery('#$id').daterangepicker($options);");
+        $js = "jQuery('#$id').daterangepicker($options)";
+        foreach ($this->clientEvents as $event => $handler) {
+            $js .= ".on('$event', $handler)";
+        }
+        $view->registerJs($js . ';');
     }
 }
