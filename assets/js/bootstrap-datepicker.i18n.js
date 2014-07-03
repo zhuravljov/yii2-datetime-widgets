@@ -13,6 +13,18 @@
         rtl: true
     };
 }(jQuery));
+// Azerbaijani
+;(function($){
+    $.fn.datepicker.dates['az'] = {
+        days: ["Bazar", "Bazar ertəsi", "Çərşənbə axşamı", "Çərşənbə", "Cümə axşamı", "Cümə", "Şənbə", "Bazar"],
+        daysShort: ["B.", "B.e", "Ç.a", "Ç.", "C.a", "C.", "Ş.", "B."],
+        daysMin: ["B.", "B.e", "Ç.a", "Ç.", "C.a", "C.", "Ş.", "B."],
+        months: ["Yanvar", "Fevral", "Mart", "Aprel", "May", "İyun", "İyul", "Avqust", "Sentyabr", "Oktyabr", "Noyabr", "Dekabr"],
+        monthsShort: ["Yan", "Fev", "Mar", "Apr", "May", "İyun", "İyul", "Avq", "Sen", "Okt", "Noy", "Dek"],
+        today: "Bu gün",
+        weekStart: 1
+    };
+}(jQuery));
 /**
  * Bulgarian translation for bootstrap-datepicker
  * Apostol Apostolov <apostol.s.apostolov@gmail.com>
@@ -103,8 +115,8 @@
 	};
 }(jQuery));
 /**
-* Greek translation for bootstrap-datepicker
-*/
+ * Greek translation for bootstrap-datepicker
+ */
 ;(function($){
   $.fn.datepicker.dates['el'] = {
     days: ["Κυριακή", "Δευτέρα", "Τρίτη", "Τετάρτη", "Πέμπτη", "Παρασκευή", "Σάββατο", "Κυριακή"],
@@ -114,7 +126,8 @@
     monthsShort: ["Ιαν", "Φεβ", "Μαρ", "Απρ", "Μάι", "Ιουν", "Ιουλ", "Αυγ", "Σεπ", "Οκτ", "Νοε", "Δεκ"],
     today: "Σήμερα"
   };
-}(jQuery));/**
+}(jQuery));
+/**
  * Spanish translation for bootstrap-datepicker
  * Bruno Bonamin <bruno.bonamin@gmail.com>
  */
@@ -227,11 +240,11 @@
  */
 ;(function($){
 	$.fn.datepicker.dates['hr'] = {
-		days: ["Nedjelja", "Ponedjelja", "Utorak", "Srijeda", "Četrtak", "Petak", "Subota", "Nedjelja"],
-		daysShort: ["Ned", "Pon", "Uto", "Srr", "Čet", "Pet", "Sub", "Ned"],
+		days: ["Nedjelja", "Ponedjeljak", "Utorak", "Srijeda", "Četvrtak", "Petak", "Subota", "Nedjelja"],
+		daysShort: ["Ned", "Pon", "Uto", "Sri", "Čet", "Pet", "Sub", "Ned"],
 		daysMin: ["Ne", "Po", "Ut", "Sr", "Če", "Pe", "Su", "Ne"],
 		months: ["Siječanj", "Veljača", "Ožujak", "Travanj", "Svibanj", "Lipanj", "Srpanj", "Kolovoz", "Rujan", "Listopad", "Studeni", "Prosinac"],
-		monthsShort: ["Sije", "Velj", "Ožu", "Tra", "Svi", "Lip", "Jul", "Kol", "Ruj", "Lis", "Stu", "Pro"],
+		monthsShort: ["Sij", "Velj", "Ožu", "Tra", "Svi", "Lip", "Srp", "Kol", "Ruj", "Lis", "Stu", "Pro"],
 		today: "Danas"
 	};
 }(jQuery));
@@ -292,6 +305,7 @@
 		months: ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"],
 		monthsShort: ["Gen", "Feb", "Mar", "Apr", "Mag", "Giu", "Lug", "Ago", "Set", "Ott", "Nov", "Dic"],
 		today: "Oggi",
+		clear: "Cancella",
 		weekStart: 1,
 		format: "dd/mm/yyyy"
 	};
@@ -381,13 +395,14 @@
     $.fn.datepicker.dates['lv'] = {
         days: ["Svētdiena", "Pirmdiena", "Otrdiena", "Trešdiena", "Ceturtdiena", "Piektdiena", "Sestdiena", "Svētdiena"],
         daysShort: ["Sv", "P", "O", "T", "C", "Pk", "S", "Sv"],
-        daysMin: ["Sv", "Pr", "Ot", "Tr", "Ce", "Pk", "St", "Sv"],
+        daysMin: ["Sv", "Pr", "Ot", "Tr", "Ce", "Pk", "Se", "Sv"],
         months: ["Janvāris", "Februāris", "Marts", "Aprīlis", "Maijs", "Jūnijs", "Jūlijs", "Augusts", "Septembris", "Oktobris", "Novembris", "Decembris"],
-        monthsShort: ["Jan", "Feb", "Mar", "Apr", "Mai", "Jūn", "Jūl", "Aug", "Sep", "Okt", "Nov", "Dec."],
+        monthsShort: ["Jan", "Feb", "Mar", "Apr", "Mai", "Jūn", "Jūl", "Aug", "Sep", "Okt", "Nov", "Dec"],
         today: "Šodien",
         weekStart: 1
     };
-}(jQuery));/**
+}(jQuery));
+/**
  * Macedonian translation for bootstrap-datepicker
  * Marko Aleksic <psybaron@gmail.com>
  */
@@ -429,11 +444,12 @@
 		monthsShort: ["Jan", "Feb", "Mar", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Des"],
 		today: "I Dag"
 	};
-}(jQuery));/**
+}(jQuery));
+/**
  * Belgium-Dutch translation for bootstrap-datepicker
  * Julien Poulin <poulin_julien@hotmail.com>
  */
-; (function ($) {
+;(function($){
   $.fn.datepicker.dates['nl-BE'] = {
     days: ["Zondag", "Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag", "Zaterdag", "Zondag"],
     daysShort: ["Zo", "Ma", "Di", "Wo", "Do", "Vr", "Za", "Zo"],
@@ -445,7 +461,8 @@
     weekStart: 1,
     format: "dd/mm/yyyy"
   };
-}(jQuery));/**
+}(jQuery));
+/**
  * Dutch translation for bootstrap-datepicker
  * Reinier Goltstein <mrgoltstein@gmail.com>
  */
@@ -533,6 +550,7 @@
 		months: ["Ianuarie", "Februarie", "Martie", "Aprilie", "Mai", "Iunie", "Iulie", "August", "Septembrie", "Octombrie", "Noiembrie", "Decembrie"],
 		monthsShort: ["Ian", "Feb", "Mar", "Apr", "Mai", "Iun", "Iul", "Aug", "Sep", "Oct", "Nov", "Dec"],
 		today: "Astăzi",
+		clear: "Șterge",
 		weekStart: 1
 	};
 }(jQuery));
@@ -634,7 +652,7 @@
 		daysMin: ["Sö", "Må", "Ti", "On", "To", "Fr", "Lö", "Sö"],
 		months: ["Januari", "Februari", "Mars", "April", "Maj", "Juni", "Juli", "Augusti", "September", "Oktober", "November", "December"],
 		monthsShort: ["Jan", "Feb", "Mar", "Apr", "Maj", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dec"],
-		today: "I Dag",
+		today: "Idag",
 		format: "yyyy-mm-dd",
 		weekStart: 1
 	};
@@ -690,29 +708,32 @@
  */
 ;(function($){
 	$.fn.datepicker.dates['ua'] = {
-		days: ["Неділя", "Понеділок", "Вівторок", "Середа", "Четверг", "П'ятница", "Субота", "Неділя"],
+		days: ["Неділя", "Понеділок", "Вівторок", "Середа", "Четвер", "П'ятница", "Субота", "Неділя"],
 		daysShort: ["Нед", "Пнд", "Втр", "Срд", "Чтв", "Птн", "Суб", "Нед"],
 		daysMin: ["Нд", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Нд"],
 		months: ["Cічень", "Лютий", "Березень", "Квітень", "Травень", "Червень", "Липень", "Серпень", "Вересень", "Жовтень", "Листопад", "Грудень"],
-		monthsShort: ["Січ", "Лют", "Бер", "Квт", "Трв", "Чер", "Лип", "Сер", "Вер", "Жов", "Лис", "Грд"],
+		monthsShort: ["Січ", "Лют", "Бер", "Кві", "Тра", "Чер", "Лип", "Сер", "Вер", "Жов", "Лис", "Гру"],
 		today: "Сьогодні",
 		weekStart: 1
 	};
 }(jQuery));
 /**
- * Ukrainian translation for bootstrap-datepicker
- * Andrey Vityuk <andrey [dot] vityuk [at] gmail.com>
+ * Vietnamese translation for bootstrap-datepicker
+ * An Vo <https://github.com/anvoz/>
  */
 ;(function($){
-	$.fn.datepicker.dates['uk'] = {
-		days: ["Неділя", "Понеділок", "Вівторок", "Середа", "Четвер", "П'ятниця", "Субота", "Неділя"],
-		daysShort: ["Нед", "Пнд", "Втр", "Срд", "Чтв", "Птн", "Суб", "Нед"],
-		daysMin: ["Нд", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Нд"],
-		months: ["Січень", "Лютий", "Березень", "Квітень", "Травень", "Червень", "Липень", "Серпень", "Вересень", "Жовтень", "Листопад", "Грудень"],
-		monthsShort: ["Січ", "Лют", "Бер", "Кві", "Тра", "Чер", "Лип", "Сер", "Вер", "Жов", "Лис", "Гру"],
-		today: "Сьогодні"
+	$.fn.datepicker.dates['vi'] = {
+		days: ["Chủ nhật", "Thứ hai", "Thứ ba", "Thứ tư", "Thứ năm", "Thứ sáu", "Thứ bảy", "Chủ nhật"],
+		daysShort: ["CN", "Thứ 2", "Thứ 3", "Thứ 4", "Thứ 5", "Thứ 6", "Thứ 7", "CN"],
+		daysMin: ["CN", "T2", "T3", "T4", "T5", "T6", "T7", "CN"],
+		months: ["Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6", "Tháng 7", "Tháng 8", "Tháng 9", "Tháng 10", "Tháng 11", "Tháng 12"],
+		monthsShort: ["Th1", "Th2", "Th3", "Th4", "Th5", "Th6", "Th7", "Th8", "Th9", "Th10", "Th11", "Th12"],
+		today: "Hôm nay",
+		clear: "Xóa",
+		format: "dd/mm/yyyy"
 	};
-}(jQuery));/**
+}(jQuery));
+/**
  * Simplified Chinese translation for bootstrap-datepicker
  * Yuan Cheung <advanimal@gmail.com>
  */

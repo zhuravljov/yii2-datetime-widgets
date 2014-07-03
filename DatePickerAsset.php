@@ -8,6 +8,8 @@ use yii\web\AssetBundle;
  * Class DatePickerAsset
  *
  * @author Roman Zhuravlev <zhuravljov@gmail.com>
+ *
+ * @see https://github.com/eternicode/bootstrap-datepicker
  */
 class DatePickerAsset extends AssetBundle
 {
