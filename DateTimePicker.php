@@ -18,9 +18,13 @@ class DateTimePicker extends InputWidget
 	 */
 	public $options = [];
 	/**
-	 * @var array options for daterangepicker
+	 * @var array options for datetimepicker
 	 */
 	public $clientOptions = [];
+	/**
+	 * @var array events for datetimepicker
+	 */
+	public $clientEvents = [];
 
 	public function init()
 	{
@@ -42,6 +46,10 @@ class DateTimePicker extends InputWidget
 		DateTimePickerAsset::register($view);
 		$id = $this->options['id'];
 		$options = empty($this->clientOptions) ? '' : Json::encode($this->clientOptions);
-		$view->registerJs("jQuery('#$id').datetimepicker($options);");
+		$js = "jQuery('#$id').datetimepicker($options)";
+		foreach ($this->clientEvents as $event => $handler) {
+			$js .= ".on('$event', $handler)";
+		}
+		$view->registerJs($js . ';');
 	}
 }
