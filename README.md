@@ -34,6 +34,7 @@ use zhuravljov\widgets\DatePicker;
         'autoclose' => true,
         'todayHighlight' => true,
     ],
+    'clientEvents' => [],
 ]) ?>
 ```
 
@@ -59,6 +60,7 @@ use zhuravljov\widgets\DateTimePicker;
         'language' => 'ru',
         'autoclose' => true,
     ],
+    'clientEvents' => [],
 ]) ?>
 ```
 
@@ -92,6 +94,7 @@ use zhuravljov\widgets\DateRangePicker;
         'format' => 'DD.MM.YYYY',
         'separator' => ' - ',
     ],
+    'clientEvents' => [],
 ]) ?>
 ```
 
