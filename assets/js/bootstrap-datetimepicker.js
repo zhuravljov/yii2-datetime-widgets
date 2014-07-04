@@ -44,6 +44,10 @@
 
 		this.element = $(element);
 
+		// add container for single page application
+		// when page switch the datetimepicker div will be removed also.
+		this.container = options.container || 'body';
+
 		this.language = options.language || this.element.data('date-language') || "en";
 		this.language = this.language in dates ? this.language : "en";
 		this.isRTL = dates[this.language].rtl || false;
@@ -52,6 +56,7 @@
 		this.isInline = false;
 		this.isVisible = false;
 		this.isInput = this.element.is('input');
+
 
 		this.bootcssVer = this.isInput ? (this.element.is('.form-control') ? 3 : 2) : ( this.bootcssVer = this.element.is('.input-group') ? 3 : 2 );
 
@@ -140,7 +145,7 @@
 		}
 
 		this.picker = $((this.bootcssVer == 3) ? DPGlobal.templateV3 : DPGlobal.template)
-			.appendTo(this.isInline ? this.element : 'body')
+			.appendTo(this.isInline ? this.element : this.container) // 'body')
 			.on({
 				click:     $.proxy(this.click, this),
 				mousedown: $.proxy(this.mousedown, this)
@@ -429,7 +434,13 @@
 			});
 			var zIndex = index_highest + 10;
 
-			var offset, top, left;
+			var offset, top, left, containerOffset;
+			if (this.container instanceof $) {
+				containerOffset = this.container.offset();
+			} else {
+				containerOffset = $(this.container).offset();
+			}
+
 			if (this.component) {
 				offset = this.component.offset();
 				left = offset.left;
@@ -440,11 +451,20 @@
 				offset = this.element.offset();
 				left = offset.left;
 			}
+			
+			if(left+220 > document.body.clientWidth){
+            			left = document.body.clientWidth-220;
+          		}
+			
 			if (this.pickerPosition == 'top-left' || this.pickerPosition == 'top-right') {
 				top = offset.top - this.picker.outerHeight();
 			} else {
 				top = offset.top + this.height;
 			}
+
+			top = top - containerOffset.top;
+			left = left - containerOffset.left;
+
 			this.picker.css({
 				top:    top,
 				left:   left,
@@ -458,7 +478,7 @@
 				date = arguments[0];
 				fromArgs = true;
 			} else {
-				date = this.element.data('date') || (this.isInput ? this.element.val() : this.element.find('input').val()) || this.initialDate;
+				date = (this.isInput ? this.element.val() : this.element.find('input').val()) || this.element.data('date') || this.initialDate;
 				if (typeof date == 'string' || date instanceof String) {
 				  date = date.replace(/^\s+|\s+$/g,'');
 				}
@@ -526,9 +546,9 @@
 				var minutesDisplay = (minutes < 10 ? '0' : '') + minutes;
 				var meridianDisplay = dates[this.language].meridiem[hours < 12 ? 0 : 1];
 				this.picker.find('.datetimepicker-hours thead th:eq(1)')
-					.text(hoursDisplay + ':' + minutesDisplay + ' ' + meridianDisplay.toUpperCase());
+					.text(hoursDisplay + ':' + minutesDisplay + ' ' + (meridianDisplay ? meridianDisplay.toUpperCase() : ''));
 				this.picker.find('.datetimepicker-minutes thead th:eq(1)')
-					.text(hoursDisplay + ':' + minutesDisplay + ' ' + meridianDisplay.toUpperCase());
+					.text(hoursDisplay + ':' + minutesDisplay + ' ' + (meridianDisplay ? meridianDisplay.toUpperCase() : ''));
 			} else {
 				this.picker.find('.datetimepicker-hours thead th:eq(1)')
 					.text(dayMonth + ' ' + dates[this.language].months[month] + ' ' + year);
@@ -789,6 +809,9 @@
 			e.stopPropagation();
 			e.preventDefault();
 			var target = $(e.target).closest('span, td, th, legend');
+			if (target.is('.glyphicon')) {
+				target = $(target).parent().closest('span, td, th, legend');
+			}
 			if (target.length == 1) {
 				if (target.is('.disabled')) {
 					this.element.trigger({
@@ -824,6 +847,12 @@
 										break;
 								}
 								this.fill();
+								this.element.trigger({
+									type:      target[0].className + ':' + this.convertViewModeText(this.viewMode),
+									date:      this.viewDate,
+									startDate: this.startDate,
+									endDate:   this.endDate
+								});
 								break;
 							case 'today':
 								var date = new Date();
@@ -1221,13 +1250,29 @@
 
 		reset: function (e) {
 			this._setDate(null, 'date');
+		},
+
+		convertViewModeText:  function (viewMode) {
+			switch (viewMode) {
+				case 4:
+					return 'decade';
+				case 3:
+					return 'year';
+				case 2:
+					return 'month';
+				case 1:
+					return 'day';
+				case 0:
+					return 'hour';
+			}
 		}
 	};
 
 	$.fn.datetimepicker = function (option) {
 		var args = Array.apply(null, arguments);
 		args.shift();
-		return this.each(function () {
+		var internal_return;
+		this.each(function () {
 			var $this = $(this),
 				data = $this.data('datetimepicker'),
 				options = typeof option == 'object' && option;
@@ -1235,9 +1280,16 @@
 				$this.data('datetimepicker', (data = new Datetimepicker(this, $.extend({}, $.fn.datetimepicker.defaults, options))));
 			}
 			if (typeof option == 'string' && typeof data[option] == 'function') {
-				data[option].apply(data, args);
+				internal_return = data[option].apply(data, args);
+				if (internal_return !== undefined) {
+					return false;
+				}
 			}
 		});
+		if (internal_return !== undefined)
+			return internal_return;
+		else
+			return this;
 	};
 
 	$.fn.datetimepicker.defaults = {
@@ -1406,7 +1458,10 @@
 						v %= 12;
 						d.setUTCMonth(v);
 						while (d.getUTCMonth() != v)
-							d.setUTCDate(d.getUTCDate() - 1);
+							if (isNaN(d.getUTCMonth()))
+								return d;
+							else
+								d.setUTCDate(d.getUTCDate() - 1);
 						return d;
 					},
 					d:    function (d, v) {
@@ -1439,7 +1494,7 @@
 								filtered = $(dates[language].monthsShort).filter(function () {
 									var m = this.slice(0, parts[i].length),
 										p = parts[i].slice(0, m.length);
-									return m == p;
+									return m.toLowerCase() == p.toLowerCase();
 								});
 								val = $.inArray(filtered[0], dates[language].monthsShort) + 1;
 								break;
@@ -1584,9 +1639,9 @@
 			'</thead>',
 		headTemplateV3:   '<thead>' +
 							  '<tr>' +
-							  '<th class="prev"><i class="glyphicon glyphicon-arrow-left"></i> </th>' +
+							  '<th class="prev"><span class="glyphicon glyphicon-arrow-left"></span> </th>' +
 							  '<th colspan="5" class="switch"></th>' +
-							  '<th class="next"><i class="glyphicon glyphicon-arrow-right"></i> </th>' +
+							  '<th class="next"><span class="glyphicon glyphicon-arrow-right"></span> </th>' +
 							  '</tr>' +
 			'</thead>',
 		contTemplate:     '<tbody><tr><td colspan="7"></td></tr></tbody>',

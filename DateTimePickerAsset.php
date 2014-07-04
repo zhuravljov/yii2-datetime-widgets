@@ -8,6 +8,8 @@ use yii\web\AssetBundle;
  * Class DateTimePickerAsset
  *
  * @author Roman Zhuravlev <zhuravljov@gmail.com>
+ *
+ * @see https://github.com/smalot/bootstrap-datetimepicker
  */
 class DateTimePickerAsset extends AssetBundle
 {

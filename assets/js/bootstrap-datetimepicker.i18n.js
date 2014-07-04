@@ -1,4 +1,21 @@
 /**
+* Arabic translation for bootstrap-datetimepicker
+* Ala' Mohammad <amohammad@birzeit.ecu>
+*/
+;(function($){
+	$.fn.datetimepicker.dates['ar'] = {
+		days: ["الأحد", "الاثنين", "الثلاثاء", "الأربعاء", "الخميس", "الجمعة", "السبت", "الأحد"],
+		daysShort: ["أحد", "اثنين", "ثلاثاء", "أربعاء", "خميس", "جمعة", "سبت", "أحد"],
+		daysMin: ["أح", "إث", "ث", "أر", "خ", "ج", "س", "أح"],
+		months: ["يناير", "فبراير", "مارس", "أبريل", "مايو", "يونيو", "يوليو", "أغسطس", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر"],
+		monthsShort: ["يناير", "فبراير", "مارس", "أبريل", "مايو", "يونيو", "يوليو", "أغسطس", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر"],
+		today: "هذا اليوم",
+		suffix: [],
+		meridiem: [],
+		rtl: true
+	};
+})(jQuery);
+/**
  * Bulgarian translation for bootstrap-datetimepicker
  * Apostol Apostolov <apostol.s.apostolov@gmail.com>
  */
@@ -13,12 +30,12 @@
 		suffix: [],
 		meridiem: []
 	};
-}(jQuery));
+})(jQuery);
 /**
  * Catalan translation for bootstrap-datetimepicker
  * J. Garcia <jogaco.en@gmail.com>
  */
-(function($){
+;(function($){
 	$.fn.datetimepicker.dates['ca'] = {
 		days: ["Diumenge", "Dilluns", "Dimarts", "Dimecres", "Dijous", "Divendres", "Dissabte", "Diumenge"],
 		daysShort: ["Diu",  "Dil", "Dmt", "Dmc", "Dij", "Div", "Dis", "Diu"],
@@ -29,13 +46,13 @@
 		suffix: [],
 		meridiem: []
 	};
-}(jQuery));
+})(jQuery);
 /**
  * Czech translation for bootstrap-datetimepicker
  * Matěj Koubík <matej@koubik.name>
  * Fixes by Michal Remiš <michal.remis@gmail.com>
  */
-(function($){
+;(function($){
 	$.fn.datetimepicker.dates['cs'] = {
 		days: ["Neděle", "Pondělí", "Úterý", "Středa", "Čtvrtek", "Pátek", "Sobota", "Neděle"],
 		daysShort: ["Ned", "Pon", "Úte", "Stř", "Čtv", "Pát", "Sob", "Ned"],
@@ -44,14 +61,16 @@
 		monthsShort: ["Led", "Úno", "Bře", "Dub", "Kvě", "Čer", "Čnc", "Srp", "Zář", "Říj", "Lis", "Pro"],
 		today: "Dnes",
 		suffix: [],
-		meridiem: []
+		meridiem: [],
+		weekStart: 1,
+		format: "dd.mm.yyyy"
 	};
-}(jQuery));
+})(jQuery);
 /**
  * Danish translation for bootstrap-datetimepicker
  * Christian Pedersen <http://github.com/chripede>
  */
-(function($){
+;(function($){
 	$.fn.datetimepicker.dates['da'] = {
 		days: ["Søndag", "Mandag", "Tirsdag", "Onsdag", "Torsdag", "Fredag", "Lørdag", "Søndag"],
 		daysShort: ["Søn", "Man", "Tir", "Ons", "Tor", "Fre", "Lør", "Søn"],
@@ -62,11 +81,12 @@
 		suffix: [],
 		meridiem: []
 	};
-}(jQuery));/**
+})(jQuery);
+/**
  * German translation for bootstrap-datetimepicker
  * Sam Zurcher <sam@orelias.ch>
  */
-(function($){
+;(function($){
 	$.fn.datetimepicker.dates['de'] = {
 		days: ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag", "Sonntag"],
 		daysShort: ["Son", "Mon", "Die", "Mit", "Don", "Fre", "Sam", "Son"],
@@ -79,12 +99,30 @@
 		weekStart: 1,
 		format: "dd.mm.yyyy"
 	};
-}(jQuery));
+})(jQuery);
+/**
+ * Estonian translation for bootstrap-datetimepicker
+ * Rene Korss <http://rene.korss.ee>
+ */
+;(function($){
+	$.fn.datetimepicker.dates['ee'] = {
+		days: ["Pühapäev", "Esmaspäev", "Teisipäev", "Kolmapäev", "Neljapäev", "Reede", "Laupäev", "Pühapäev"],
+		daysShort: ["P", "E", "T", "K", "N", "R", "L", "P"],
+		daysMin: ["P", "E", "T", "K", "N", "R", "L", "P"],
+		months: ["Jaanuar", "Veebruar", "Märts", "Aprill", "Mai", "Juuni", "Juuli", "August", "September", "Oktoober", "November", "Detsember"],
+		monthsShort: ["Jaan", "Veebr", "Märts", "Apr", "Mai", "Juuni", "Juuli", "Aug", "Sept", "Okt", "Nov", "Dets"],
+		today: "Täna",
+		suffix: [],
+		meridiem: [],
+		weekStart: 1,
+		format: "dd.mm.yyyy hh:ii"
+	};
+})(jQuery);
 /**
 * Greek translation for bootstrap-datetimepicker
 */
-(function($){
-	$.fn.datetimepicker.dates['el'] = {
+;(function($){
+  $.fn.datetimepicker.dates['el'] = {
 		days: ["Κυριακή", "Δευτέρα", "Τρίτη", "Τετάρτη", "Πέμπτη", "Παρασκευή", "Σάββατο", "Κυριακή"],
 		daysShort: ["Κυρ", "Δευ", "Τρι", "Τετ", "Πεμ", "Παρ", "Σαβ", "Κυρ"],
 		daysMin: ["Κυ", "Δε", "Τρ", "Τε", "Πε", "Πα", "Σα", "Κυ"],
@@ -93,12 +131,13 @@
 		today: "Σήμερα",
 		suffix: [],
 		meridiem: []
-	};
-}(jQuery));/**
+  };
+})(jQuery);
+/**
  * Spanish translation for bootstrap-datetimepicker
  * Bruno Bonamin <bruno.bonamin@gmail.com>
  */
-(function($){
+;(function($){
 	$.fn.datetimepicker.dates['es'] = {
 		days: ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"],
 		daysShort: ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"],
@@ -109,12 +148,12 @@
 		suffix: [],
 		meridiem: []
 	};
-}(jQuery));
+})(jQuery);
 /**
  * Finnish translation for bootstrap-datetimepicker
  * Jaakko Salonen <https://github.com/jsalonen>
  */
-(function($){
+;(function($){
 	$.fn.datetimepicker.dates['fi'] = {
 		days: ["sunnuntai", "maanantai", "tiistai", "keskiviikko", "torstai", "perjantai", "lauantai", "sunnuntai"],
 		daysShort: ["sun", "maa", "tii", "kes", "tor", "per", "lau", "sun"],
@@ -125,12 +164,12 @@
 		suffix: [],
 		meridiem: []
 	};
-}(jQuery));
+})(jQuery);
 /**
  * French translation for bootstrap-datetimepicker
  * Nico Mollet <nico.mollet@gmail.com>
  */
-(function($){
+;(function($){
 	$.fn.datetimepicker.dates['fr'] = {
 		days: ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"],
 		daysShort: ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"],
@@ -143,12 +182,12 @@
 		weekStart: 1,
 		format: "dd/mm/yyyy"
 	};
-}(jQuery));
+})(jQuery);
 /**
  * Hebrew translation for bootstrap-datetimepicker
  * Sagie Maoz <sagie@maoz.info>
  */
-(function($){
+;(function($){
   $.fn.datetimepicker.dates['he'] = {
 	  days: ["ראשון", "שני", "שלישי", "רביעי", "חמישי", "שישי", "שבת", "ראשון"],
 	  daysShort: ["א", "ב", "ג", "ד", "ה", "ו", "ש", "א"],
@@ -160,11 +199,11 @@
 	  meridiem: [],
 	  rtl: true
   };
-}(jQuery));
+})(jQuery);
 /**
  * Croatian localisation
  */
-(function($){
+;(function($){
 	$.fn.datetimepicker.dates['hr'] = {
 		days: ["Nedjelja", "Ponedjelja", "Utorak", "Srijeda", "Četrtak", "Petak", "Subota", "Nedjelja"],
 		daysShort: ["Ned", "Pon", "Uto", "Srr", "Čet", "Pet", "Sub", "Ned"],
@@ -175,12 +214,12 @@
 		suffix: [],
 		meridiem: []
 	};
-}(jQuery));
+})(jQuery);
 /**
  * Hungarian translation for bootstrap-datetimepicker
  * darevish <http://github.com/darevish>
  */
-(function($){
+;(function($){
 	$.fn.datetimepicker.dates['hu'] = {
 		days: ["Vasárnap", "Hétfő", "Kedd", "Szerda", "Csütörtök", "Péntek", "Szombat", "Vasárnap"],
 		daysShort: ["Vas", "Hét", "Ked", "Sze", "Csü", "Pén", "Szo", "Vas"],
@@ -192,12 +231,12 @@
 		meridiem: [],
 		weekStart: 1
 	};
-}(jQuery));
+})(jQuery);
 /**
  * Bahasa translation for bootstrap-datetimepicker
  * Azwar Akbar <azwar.akbar@gmail.com>
  */
-(function($){
+;(function($){
 	$.fn.datetimepicker.dates['id'] = {
 		days: ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu"],
 		daysShort: ["Mgu", "Sen", "Sel", "Rab", "Kam", "Jum", "Sab", "Mgu"],
@@ -207,12 +246,12 @@
 		suffix: [],
 		meridiem: []
 	};
-}(jQuery));
+})(jQuery);
 /**
  * Icelandic translation for bootstrap-datetimepicker
  * Hinrik Örn Sigurðsson <hinrik.sig@gmail.com>
  */
-(function($){
+;(function($){
 	$.fn.datetimepicker.dates['is'] = {
 		days: ["Sunnudagur", "Mánudagur", "Þriðjudagur", "Miðvikudagur", "Fimmtudagur", "Föstudagur", "Laugardagur", "Sunnudagur"],
 		daysShort: ["Sun", "Mán", "Þri", "Mið", "Fim", "Fös", "Lau", "Sun"],
@@ -223,12 +262,12 @@
 		suffix: [],
 		meridiem: []
 	};
-}(jQuery));
+})(jQuery);
 /**
  * Italian translation for bootstrap-datetimepicker
  * Enrico Rubboli <rubboli@gmail.com>
  */
-(function($){
+;(function($){
 	$.fn.datetimepicker.dates['it'] = {
 		days: ["Domenica", "Lunedi", "Martedi", "Mercoledi", "Giovedi", "Venerdi", "Sabato", "Domenica"],
 		daysShort: ["Dom", "Lun", "Mar", "Mer", "Gio", "Ven", "Sab", "Dom"],
@@ -239,14 +278,14 @@
 		suffix: [],
 		meridiem: [],
 		weekStart: 1,
-		format: "dd.mm.yyyy"
+		format: "dd/mm/yyyy hh:ii:ss"
 	};
-}(jQuery));
+})(jQuery);
 /**
  * Japanese translation for bootstrap-datetimepicker
  * Norio Suzuki <https://github.com/suzuki/>
  */
-(function($){
+;(function($){
 	$.fn.datetimepicker.dates['ja'] = {
 		days: ["日曜", "月曜", "火曜", "水曜", "木曜", "金曜", "土曜", "日曜"],
 		daysShort: ["日", "月", "火", "水", "木", "金", "土", "日"],
@@ -257,46 +296,29 @@
 		suffix: [],
 		meridiem: []
 	};
-}(jQuery));
+})(jQuery);
 /**
  * Korean translation for bootstrap-datetimepicker
  * Gu Youn <http://github.com/guyoun>
+ * Baekjoon Choi <http://github.com/Baekjoon>
  */
-(function($){
-	$.fn.datetimepicker.dates['kr'] = {
+;(function($){
+	$.fn.datetimepicker.dates['ko'] = {
 		days: ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일", "일요일"],
 		daysShort: ["일", "월", "화", "수", "목", "금", "토", "일"],
 		daysMin: ["일", "월", "화", "수", "목", "금", "토", "일"],
 		months: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
 		monthsShort: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
 		suffix: [],
-		meridiem: []
+		meridiem: ["오전", "오후"],
+		today: "오늘"
 	};
-}(jQuery));
-/**
- * Lithuanian translation for bootstrap-datetimepicker
- * Šarūnas Gliebus <ssharunas@yahoo.co.uk>
- */
-
-(function($){
-	$.fn.datetimepicker.dates['lt'] = {
-		days: ["Sekmadienis", "Pirmadienis", "Antradienis", "Trečiadienis", "Ketvirtadienis", "Penktadienis", "Šeštadienis", "Sekmadienis"],
-		daysShort: ["S", "Pr", "A", "T", "K", "Pn", "Š", "S"],
-		daysMin: ["Sk", "Pr", "An", "Tr", "Ke", "Pn", "Št", "Sk"],
-		months: ["Sausis", "Vasaris", "Kovas", "Balandis", "Gegužė", "Birželis", "Liepa", "Rugpjūtis", "Rugsėjis", "Spalis", "Lapkritis", "Gruodis"],
-		monthsShort: ["Sau", "Vas", "Kov", "Bal", "Geg", "Bir", "Lie", "Rugp", "Rugs", "Spa", "Lap", "Gru"],
-		today: "Šiandien",
-		suffix: [],
-		meridiem: [],
-		weekStart: 1
-	};
-}(jQuery));
+})(jQuery);
 /**
  * Latvian translation for bootstrap-datetimepicker
  * Artis Avotins <artis@apit.lv>
  */
-
-(function($){
+;(function($){
 	$.fn.datetimepicker.dates['lv'] = {
 		days: ["Svētdiena", "Pirmdiena", "Otrdiena", "Trešdiena", "Ceturtdiena", "Piektdiena", "Sestdiena", "Svētdiena"],
 		daysShort: ["Sv", "P", "O", "T", "C", "Pk", "S", "Sv"],
@@ -308,12 +330,12 @@
 		meridiem: [],
 		weekStart: 1
 	};
-}(jQuery));
+})(jQuery);
 /**
  * Malay translation for bootstrap-datetimepicker
  * Ateman Faiz <noorulfaiz@gmail.com>
  */
-(function($){
+;(function($){
 	$.fn.datetimepicker.dates['ms'] = {
 		days: ["Ahad", "Isnin", "Selasa", "Rabu", "Khamis", "Jumaat", "Sabtu", "Ahad"],
 		daysShort: ["Aha", "Isn", "Sel", "Rab", "Kha", "Jum", "Sab", "Aha"],
@@ -324,12 +346,12 @@
 		suffix: [],
 		meridiem: []
 	};
-}(jQuery));
+})(jQuery);
 /**
  * Norwegian (bokmål) translation for bootstrap-datetimepicker
  * Fredrik Sundmyhr <http://github.com/fsundmyhr>
  */
-(function($){
+;(function($){
 	$.fn.datetimepicker.dates['nb'] = {
 		days: ["Søndag", "Mandag", "Tirsdag", "Onsdag", "Torsdag", "Fredag", "Lørdag", "Søndag"],
 		daysShort: ["Søn", "Man", "Tir", "Ons", "Tor", "Fre", "Lør", "Søn"],
@@ -340,12 +362,12 @@
 		suffix: [],
 		meridiem: []
 	};
-}(jQuery));
+})(jQuery);
 /**
  * Dutch translation for bootstrap-datetimepicker
  * Reinier Goltstein <mrgoltstein@gmail.com>
  */
-(function($){
+;(function($){
 	$.fn.datetimepicker.dates['nl'] = {
 		days: ["Zondag", "Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag", "Zaterdag", "Zondag"],
 		daysShort: ["Zo", "Ma", "Di", "Wo", "Do", "Vr", "Za", "Zo"],
@@ -356,12 +378,12 @@
 		suffix: [],
 		meridiem: []
 	};
-}(jQuery));
+})(jQuery);
 /**
  * Norwegian translation for bootstrap-datetimepicker
  * Rune Warhuus <rune@dinkdonkd.no>
  */
-(function($){
+;(function($){
 	$.fn.datetimepicker.dates['no'] = {
 		days: ["Søndag", "Mandag", "Tirsdag", "Onsdag", "Torsdag", "Fredag", "Lørdag", "Søndag"],
 		daysShort: ["Søn", "Man", "Tir", "Ons", "Tor", "Fre", "Lør", "Søn"],
@@ -372,13 +394,13 @@
 		suffix: [],
 		meridiem: []
 	};
-}(jQuery));
+})(jQuery);
 /**
  * Polish translation for bootstrap-datetimepicker
  * Robert <rtpm@gazeta.pl>
  */
-(function($){
-	$.fn.datetimepicker.dates['pl'] = {
+;(function($){
+$.fn.datetimepicker.dates['pl'] = {
 		days: ["Niedziela", "Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota", "Niedziela"],
 		daysShort: ["Nie", "Pn", "Wt", "Śr", "Czw", "Pt", "So", "Nie"],
 		daysMin: ["N", "Pn", "Wt", "Śr", "Cz", "Pt", "So", "N"],
@@ -389,12 +411,12 @@
 		meridiem: [],
 		weekStart: 1
 };
-}(jQuery));
+})(jQuery);
 /**
  * Brazilian translation for bootstrap-datetimepicker
  * Cauan Cabral <cauan@radig.com.br>
  */
-(function($){
+;(function($){
 	$.fn.datetimepicker.dates['pt-BR'] = {
 		format: 'dd/mm/yyyy',
 		days: ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Domingo"],
@@ -406,13 +428,13 @@
 		suffix: [],
 		meridiem: []
 	};
-}(jQuery));
+})(jQuery);
 /**
  * Portuguese translation for bootstrap-datetimepicker
  * Original code: Cauan Cabral <cauan@radig.com.br>
  * Tiago Melo <tiago.blackcode@gmail.com>
  */
-(function($){
+;(function($){
 	$.fn.datetimepicker.dates['pt'] = {
 		days: ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Domingo"],
 		daysShort: ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb", "Dom"],
@@ -423,12 +445,12 @@
 		meridiem: ["am","pm"],
 		today: "Hoje"
 	};
-}(jQuery));
+})(jQuery);
 /**
  * Romanian translation for bootstrap-datetimepicker
  * Cristian Vasile <cristi.mie@gmail.com>
  */
-(function($){
+;(function($){
 	$.fn.datetimepicker.dates['ro'] = {
 		days: ["Duminică", "Luni", "Marţi", "Miercuri", "Joi", "Vineri", "Sâmbătă", "Duminică"],
 		daysShort: ["Dum", "Lun", "Mar", "Mie", "Joi", "Vin", "Sâm", "Dum"],
@@ -440,12 +462,12 @@
 		meridiem: [],
 		weekStart: 1
 	};
-}(jQuery));
+})(jQuery);
 /**
  * Serbian latin translation for bootstrap-datetimepicker
  * Bojan Milosavlević <milboj@gmail.com>
  */
-(function($){
+;(function($){
 	$.fn.datetimepicker.dates['rs'] = {
 		days: ["Nedelja","Ponedeljak", "Utorak", "Sreda", "Četvrtak", "Petak", "Subota", "Nedelja"],
 		daysShort: ["Ned", "Pon", "Uto", "Sre", "Čet", "Pet", "Sub", "Ned"],
@@ -456,12 +478,12 @@
 		suffix: [],
 		meridiem: []
 	};
-}(jQuery));
+})(jQuery);
 /**
  * Serbian cyrillic translation for bootstrap-datetimepicker
  * Bojan Milosavlević <milboj@gmail.com>
  */
-(function($){
+;(function($){
 	$.fn.datetimepicker.dates['rs'] = {
 		days: ["Недеља","Понедељак", "Уторак", "Среда", "Четвртак", "Петак", "Субота", "Недеља"],
 		daysShort: ["Нед", "Пон", "Уто", "Сре", "Чет", "Пет", "Суб", "Нед"],
@@ -472,12 +494,12 @@
 		suffix: [],
 		meridiem: []
 	};
-}(jQuery));
+})(jQuery);
 /**
  * Russian translation for bootstrap-datetimepicker
  * Victor Taranenko <darwin@snowdale.com>
  */
-(function($){
+;(function($){
 	$.fn.datetimepicker.dates['ru'] = {
 		days: ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"],
 		daysShort: ["Вск", "Пнд", "Втр", "Срд", "Чтв", "Птн", "Суб", "Вск"],
@@ -489,13 +511,13 @@
 		meridiem: [],
 		weekStart: 1
 	};
-}(jQuery));
+})(jQuery);
 /**
  * Slovak translation for bootstrap-datetimepicker
  * Marek Lichtner <marek@licht.sk>
  * Fixes by Michal Remiš <michal.remis@gmail.com>
  */
-(function($){
+;(function($){
 	$.fn.datetimepicker.dates["sk"] = {
 		days: ["Nedeľa", "Pondelok", "Utorok", "Streda", "Štvrtok", "Piatok", "Sobota", "Nedeľa"],
 		daysShort: ["Ned", "Pon", "Uto", "Str", "Štv", "Pia", "Sob", "Ned"],
@@ -506,12 +528,12 @@
 		suffix: [],
 		meridiem: []
 	};
-}(jQuery));
+})(jQuery);
 /**
  * Slovene translation for bootstrap-datetimepicker
  * Gregor Rudolf <gregor.rudolf@gmail.com>
  */
-(function($){
+;(function($){
 	$.fn.datetimepicker.dates['sl'] = {
 		days: ["Nedelja", "Ponedeljek", "Torek", "Sreda", "Četrtek", "Petek", "Sobota", "Nedelja"],
 		daysShort: ["Ned", "Pon", "Tor", "Sre", "Čet", "Pet", "Sob", "Ned"],
@@ -522,12 +544,12 @@
 		suffix: [],
 		meridiem: []
 	};
-}(jQuery));
+})(jQuery);
 /**
  * Swedish translation for bootstrap-datetimepicker
  * Patrik Ragnarsson <patrik@starkast.net>
  */
-(function($){
+;(function($){
 	$.fn.datetimepicker.dates['sv'] = {
 		days: ["Söndag", "Måndag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "Lördag", "Söndag"],
 		daysShort: ["Sön", "Mån", "Tis", "Ons", "Tor", "Fre", "Lör", "Sön"],
@@ -538,13 +560,13 @@
 		suffix: [],
 		meridiem: []
 	};
-}(jQuery));
+})(jQuery);
 /**
  * Swahili translation for bootstrap-datetimepicker
  * Edwin Mugendi <https://github.com/edwinmugendi>
  * Source: http://scriptsource.org/cms/scripts/page.php?item_id=entry_detail&uid=xnfaqyzcku
  */
-(function($){
+;(function($){
 	$.fn.datetimepicker.dates['sw'] = {
 		days: ["Jumapili", "Jumatatu", "Jumanne", "Jumatano", "Alhamisi", "Ijumaa", "Jumamosi", "Jumapili"],
 		daysShort: ["J2", "J3", "J4", "J5", "Alh", "Ij", "J1", "J2"],
@@ -555,12 +577,12 @@
 		suffix: [],
 		meridiem: []
 	};
-}(jQuery));
+})(jQuery);
 /**
  * Thai translation for bootstrap-datetimepicker
  * Suchau Jiraprapot <seroz24@gmail.com>
  */
-(function($){
+;(function($){
 	$.fn.datetimepicker.dates['th'] = {
 		days: ["อาทิตย์", "จันทร์", "อังคาร", "พุธ", "พฤหัส", "ศุกร์", "เสาร์", "อาทิตย์"],
 		daysShort: ["อา", "จ", "อ", "พ", "พฤ", "ศ", "ส", "อา"],
@@ -571,12 +593,12 @@
 		suffix: [],
 		meridiem: []
 	};
-}(jQuery));
+})(jQuery);
 /**
  * Turkish translation for bootstrap-datetimepicker
  * Serkan Algur <kaisercrazy_2@hotmail.com>
  */
-(function($){
+;(function($){
 	$.fn.datetimepicker.dates['tr'] = {
 		days: ["Pazar", "Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi", "Pazar"],
 		daysShort: ["Pz", "Pzt", "Sal", "Çrş", "Prş", "Cu", "Cts", "Pz"],
@@ -587,28 +609,29 @@
 		suffix: [],
 		meridiem: []
 	};
-}(jQuery));
-
+})(jQuery);
 /**
  * Ukrainian translation for bootstrap-datepicker
  * Igor Polynets
  */
-(function($){
+;(function($){
 	$.fn.datetimepicker.dates['ua'] = {
 		days: ["Неділя", "Понеділок", "Вівторок", "Середа", "Четверг", "П'ятниця", "Субота", "Неділя"],
 		daysShort: ["Нед", "Пнд", "Втр", "Срд", "Чтв", "Птн", "Суб", "Нед"],
 		daysMin: ["Нд", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Нд"],
-		months: ["Cічень", "Лютий", "Березень", "Квітень", "Травень", "Червень", "Липень", "Серпень", "Вересень", "Жовтень", "Листопад", "Грудень"],
-		monthsShort: ["Січ", "Лют", "Бер", "Квт", "Трв", "Чер", "Лип", "Сер", "Вер", "Жов", "Лис", "Грд"],
+		months: ["Січень", "Лютий", "Березень", "Квітень", "Травень", "Червень", "Липень", "Серпень", "Вересень", "Жовтень", "Листопад", "Грудень"],
+		monthsShort: ["Січ", "Лют", "Бер", "Кві", "Тра", "Чер", "Лип", "Сер", "Вер", "Жов", "Лис", "Гру"],
 		today: "Зараз",
+		suffix: [],
+		meridiem: [],
 		weekStart: 1
 	};
-}(jQuery));
+})(jQuery);
 /**
  * Ukrainian translation for bootstrap-datetimepicker
  * Andrey Vityuk <andrey [dot] vityuk [at] gmail.com>
  */
-(function($){
+;(function($){
 	$.fn.datetimepicker.dates['uk'] = {
 		days: ["Неділя", "Понеділок", "Вівторок", "Середа", "Четвер", "П'ятниця", "Субота", "Неділя"],
 		daysShort: ["Нед", "Пнд", "Втр", "Срд", "Чтв", "Птн", "Суб", "Нед"],
@@ -617,14 +640,15 @@
 		monthsShort: ["Січ", "Лют", "Бер", "Кві", "Тра", "Чер", "Лип", "Сер", "Вер", "Жов", "Лис", "Гру"],
 		today: "Зараз",
 		suffix: [],
-		meridiem: []
+		meridiem: [],
+		weekStart: 1
 	};
-}(jQuery));
+})(jQuery);
 /**
  * Simplified Chinese translation for bootstrap-datetimepicker
  * Yuan Cheung <advanimal@gmail.com>
  */
-(function($){
+;(function($){
 	$.fn.datetimepicker.dates['zh-CN'] = {
 		days: ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日"],
 		daysShort: ["周日", "周一", "周二", "周三", "周四", "周五", "周六", "周日"],
@@ -633,14 +657,14 @@
 		monthsShort: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
 		today: "今日",
 		suffix: [],
-		meridiem: []
+		meridiem: ["上午", "下午"]
 	};
-}(jQuery));
+})(jQuery);
 /**
  * Traditional Chinese translation for bootstrap-datetimepicker
  * Rung-Sheng Jang <daniel@i-trend.co.cc>
  */
-(function($){
+;(function($){
 	$.fn.datetimepicker.dates['zh-TW'] = {
 		days: ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日"],
 		daysShort: ["周日", "周一", "周二", "周三", "周四", "周五", "周六", "周日"],
@@ -651,4 +675,4 @@
 		suffix: [],
 		meridiem: ["上午", "下午"]
 	};
-}(jQuery));
+})(jQuery);
