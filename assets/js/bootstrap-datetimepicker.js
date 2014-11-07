@@ -809,9 +809,6 @@
 			e.stopPropagation();
 			e.preventDefault();
 			var target = $(e.target).closest('span, td, th, legend');
-			if (target.is('.glyphicon')) {
-				target = $(target).parent().closest('span, td, th, legend');
-			}
 			if (target.length == 1) {
 				if (target.is('.disabled')) {
 					this.element.trigger({
@@ -847,12 +844,6 @@
 										break;
 								}
 								this.fill();
-								this.element.trigger({
-									type:      target[0].className + ':' + this.convertViewModeText(this.viewMode),
-									date:      this.viewDate,
-									startDate: this.startDate,
-									endDate:   this.endDate
-								});
 								break;
 							case 'today':
 								var date = new Date();
@@ -1250,21 +1241,6 @@
 
 		reset: function (e) {
 			this._setDate(null, 'date');
-		},
-
-		convertViewModeText:  function (viewMode) {
-			switch (viewMode) {
-				case 4:
-					return 'decade';
-				case 3:
-					return 'year';
-				case 2:
-					return 'month';
-				case 1:
-					return 'day';
-				case 0:
-					return 'hour';
-			}
 		}
 	};
 
