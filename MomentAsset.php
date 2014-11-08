@@ -21,7 +21,7 @@ class MomentAsset extends AssetBundle
         if (YII_DEBUG) {
             $this->js = ['moment.js', 'min/locales.js'];
         } else {
-            $this->js = ['js/moment-with-locales.min.js'];
+            $this->js = ['min/moment-with-locales.min.js'];
         }
     }
 }
