@@ -106,16 +106,16 @@
  */
 ;(function($){
 	$.fn.datetimepicker.dates['ee'] = {
-		days: ["Pühapäev", "Esmaspäev", "Teisipäev", "Kolmapäev", "Neljapäev", "Reede", "Laupäev", "Pühapäev"],
-		daysShort: ["P", "E", "T", "K", "N", "R", "L", "P"],
-		daysMin: ["P", "E", "T", "K", "N", "R", "L", "P"],
-		months: ["Jaanuar", "Veebruar", "Märts", "Aprill", "Mai", "Juuni", "Juuli", "August", "September", "Oktoober", "November", "Detsember"],
-		monthsShort: ["Jaan", "Veebr", "Märts", "Apr", "Mai", "Juuni", "Juuli", "Aug", "Sept", "Okt", "Nov", "Dets"],
-		today: "Täna",
-		suffix: [],
-		meridiem: [],
-		weekStart: 1,
-		format: "dd.mm.yyyy hh:ii"
+		days:			["Pühapäev", "Esmaspäev", "Teisipäev", "Kolmapäev", "Neljapäev", "Reede", "Laupäev", "Pühapäev"],
+		daysShort:   	["P", "E", "T", "K", "N", "R", "L", "P"],
+		daysMin:	 	["P", "E", "T", "K", "N", "R", "L", "P"],
+		months:	  	["Jaanuar", "Veebruar", "Märts", "Aprill", "Mai", "Juuni", "Juuli", "August", "September", "Oktoober", "November", "Detsember"],
+		monthsShort: 	["Jaan", "Veebr", "Märts", "Apr", "Mai", "Juuni", "Juuli", "Aug", "Sept", "Okt", "Nov", "Dets"],
+		today:	   	"Täna",
+		suffix:	 	[],
+		meridiem: 		[],
+		weekStart: 		1,
+		format: 		"dd.mm.yyyy hh:ii"
 	};
 })(jQuery);
 /**
@@ -315,6 +315,24 @@
 	};
 })(jQuery);
 /**
+ * Lithuanian translation for bootstrap-datetimepicker
+ * Šarūnas Gliebus <ssharunas@yahoo.co.uk>
+ */
+
+;(function($){
+	$.fn.datetimepicker.dates['lt'] = {
+		days: ["Sekmadienis", "Pirmadienis", "Antradienis", "Trečiadienis", "Ketvirtadienis", "Penktadienis", "Šeštadienis", "Sekmadienis"],
+		daysShort: ["S", "Pr", "A", "T", "K", "Pn", "Š", "S"],
+		daysMin: ["Sk", "Pr", "An", "Tr", "Ke", "Pn", "Št", "Sk"],
+		months: ["Sausis", "Vasaris", "Kovas", "Balandis", "Gegužė", "Birželis", "Liepa", "Rugpjūtis", "Rugsėjis", "Spalis", "Lapkritis", "Gruodis"],
+		monthsShort: ["Sau", "Vas", "Kov", "Bal", "Geg", "Bir", "Lie", "Rugp", "Rugs", "Spa", "Lap", "Gru"],
+		today: "Šiandien",
+		suffix: [],
+		meridiem: [],
+		weekStart: 1
+	};
+})(jQuery);
+/**
  * Latvian translation for bootstrap-datetimepicker
  * Artis Avotins <artis@apit.lv>
  */
@@ -464,22 +482,6 @@ $.fn.datetimepicker.dates['pl'] = {
 	};
 })(jQuery);
 /**
- * Serbian latin translation for bootstrap-datetimepicker
- * Bojan Milosavlević <milboj@gmail.com>
- */
-;(function($){
-	$.fn.datetimepicker.dates['rs'] = {
-		days: ["Nedelja","Ponedeljak", "Utorak", "Sreda", "Četvrtak", "Petak", "Subota", "Nedelja"],
-		daysShort: ["Ned", "Pon", "Uto", "Sre", "Čet", "Pet", "Sub", "Ned"],
-		daysMin: ["N", "Po", "U", "Sr", "Č", "Pe", "Su", "N"],
-		months: ["Januar", "Februar", "Mart", "April", "Maj", "Jun", "Jul", "Avgust", "Septembar", "Oktobar", "Novembar", "Decembar"],
-		monthsShort: ["Jan", "Feb", "Mar", "Apr", "Maj", "Jun", "Jul", "Avg", "Sep", "Okt", "Nov", "Dec"],
-		today: "Danas",
-		suffix: [],
-		meridiem: []
-	};
-})(jQuery);
-/**
  * Serbian cyrillic translation for bootstrap-datetimepicker
  * Bojan Milosavlević <milboj@gmail.com>
  */
@@ -491,6 +493,22 @@ $.fn.datetimepicker.dates['pl'] = {
 		months: ["Јануар", "Фебруар", "Март", "Април", "Мај", "Јун", "Јул", "Август", "Септембар", "Октобар", "Новембар", "Децембар"],
 		monthsShort: ["Јан", "Феб", "Мар", "Апр", "Мај", "Јун", "Јул", "Авг", "Сеп", "Окт", "Нов", "Дец"],
 		today: "Данас",
+		suffix: [],
+		meridiem: []
+	};
+})(jQuery);
+/**
+ * Serbian latin translation for bootstrap-datetimepicker
+ * Bojan Milosavlević <milboj@gmail.com>
+ */
+;(function($){
+	$.fn.datetimepicker.dates['rs'] = {
+		days: ["Nedelja","Ponedeljak", "Utorak", "Sreda", "Četvrtak", "Petak", "Subota", "Nedelja"],
+		daysShort: ["Ned", "Pon", "Uto", "Sre", "Čet", "Pet", "Sub", "Ned"],
+		daysMin: ["N", "Po", "U", "Sr", "Č", "Pe", "Su", "N"],
+		months: ["Januar", "Februar", "Mart", "April", "Maj", "Jun", "Jul", "Avgust", "Septembar", "Oktobar", "Novembar", "Decembar"],
+		monthsShort: ["Jan", "Feb", "Mar", "Apr", "Maj", "Jun", "Jul", "Avg", "Sep", "Okt", "Nov", "Dec"],
+		today: "Danas",
 		suffix: [],
 		meridiem: []
 	};
@@ -619,8 +637,8 @@ $.fn.datetimepicker.dates['pl'] = {
 		days: ["Неділя", "Понеділок", "Вівторок", "Середа", "Четверг", "П'ятниця", "Субота", "Неділя"],
 		daysShort: ["Нед", "Пнд", "Втр", "Срд", "Чтв", "Птн", "Суб", "Нед"],
 		daysMin: ["Нд", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Нд"],
-		months: ["Січень", "Лютий", "Березень", "Квітень", "Травень", "Червень", "Липень", "Серпень", "Вересень", "Жовтень", "Листопад", "Грудень"],
-		monthsShort: ["Січ", "Лют", "Бер", "Кві", "Тра", "Чер", "Лип", "Сер", "Вер", "Жов", "Лис", "Гру"],
+		months: ["Cічень", "Лютий", "Березень", "Квітень", "Травень", "Червень", "Липень", "Серпень", "Вересень", "Жовтень", "Листопад", "Грудень"],
+		monthsShort: ["Січ", "Лют", "Бер", "Квт", "Трв", "Чер", "Лип", "Сер", "Вер", "Жов", "Лис", "Грд"],
 		today: "Зараз",
 		suffix: [],
 		meridiem: [],
@@ -650,14 +668,14 @@ $.fn.datetimepicker.dates['pl'] = {
  */
 ;(function($){
 	$.fn.datetimepicker.dates['zh-CN'] = {
-		days: ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日"],
-		daysShort: ["周日", "周一", "周二", "周三", "周四", "周五", "周六", "周日"],
-		daysMin:  ["日", "一", "二", "三", "四", "五", "六", "日"],
-		months: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
-		monthsShort: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
-		today: "今日",
-		suffix: [],
-		meridiem: ["上午", "下午"]
+			days: ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日"],
+			daysShort: ["周日", "周一", "周二", "周三", "周四", "周五", "周六", "周日"],
+			daysMin:  ["日", "一", "二", "三", "四", "五", "六", "日"],
+			months: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
+			monthsShort: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
+			today: "今天",
+			suffix: [],
+			meridiem: ["上午", "下午"]
 	};
 })(jQuery);
 /**
@@ -666,13 +684,13 @@ $.fn.datetimepicker.dates['pl'] = {
  */
 ;(function($){
 	$.fn.datetimepicker.dates['zh-TW'] = {
-		days: ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日"],
-		daysShort: ["周日", "周一", "周二", "周三", "周四", "周五", "周六", "周日"],
+	days: ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日"],
+	  daysShort: ["周日", "周一", "周二", "周三", "周四", "周五", "周六", "周日"],
 		daysMin:  ["日", "一", "二", "三", "四", "五", "六", "日"],
 		months: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
 		monthsShort: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
 		today: "今天",
-		suffix: [],
+	suffix: [],
 		meridiem: ["上午", "下午"]
 	};
 })(jQuery);

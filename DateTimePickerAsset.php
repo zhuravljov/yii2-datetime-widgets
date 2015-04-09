@@ -9,7 +9,7 @@ use yii\web\AssetBundle;
  *
  * @author Roman Zhuravlev <zhuravljov@gmail.com>
  *
- * @see https://github.com/smalot/bootstrap-datetimepicker
+ * @see https://github.com/smalot/bootstrap-datetimepicker/tree/2.3.4
  */
 class DateTimePickerAsset extends AssetBundle
 {
