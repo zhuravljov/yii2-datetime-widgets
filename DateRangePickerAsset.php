@@ -9,7 +9,7 @@ use yii\web\AssetBundle;
  *
  * @author Roman Zhuravlev <zhuravljov@gmail.com>
  *
- * @see https://github.com/dangrossman/bootstrap-daterangepicker
+ * @see https://github.com/dangrossman/bootstrap-daterangepicker/tree/v1.3.21
  */
 class DateRangePickerAsset extends AssetBundle
 {
