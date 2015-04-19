@@ -14,7 +14,7 @@
     "minimum-stability": "stable",
     "require": {
         "yiisoft/yii2": "*",
-        "bower-asset/moment": "2.*"
+        "moment/moment": "2.*"
     },
     "autoload": {
         "psr-4": {
