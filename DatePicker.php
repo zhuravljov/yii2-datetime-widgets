@@ -14,6 +14,10 @@ use yii\widgets\InputWidget;
 class DatePicker extends InputWidget
 {
     /**
+     * @var string the template to render the input
+     */
+    public $template = '{input}';
+    /**
      * @var array the HTML attributes for the input tag.
      */
     public $options = [];
@@ -37,12 +41,15 @@ class DatePicker extends InputWidget
     public function run()
     {
         if ($this->hasModel()) {
-            echo Html::activeTextInput($this->model, $this->attribute, $this->options);
+            $input = Html::activeTextInput($this->model, $this->attribute, $this->options);
         } else {
-            echo Html::textInput($this->name, $this->value, $this->options);
+            $input = Html::textInput($this->name, $this->value, $this->options);
         }
+        echo strtr($this->template, ['{input}' => $input]);
+
         $view = $this->getView();
         DatePickerAsset::register($view);
+
         $id = $this->options['id'];
         $options = empty($this->clientOptions) ? '' : Json::encode($this->clientOptions);
         $js = "jQuery('#$id').datepicker($options)";
