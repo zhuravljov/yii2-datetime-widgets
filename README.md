@@ -27,7 +27,6 @@ use zhuravljov\widgets\DatePicker;
 
 ```php
 <?= $form->field($model, 'attribute')->widget(DatePicker::className(), [
-    'options' => ['class' => 'form-control'],
     'clientOptions' => [
         'format' => 'dd.mm.yyyy',
         'language' => 'ru',
@@ -54,7 +53,6 @@ use zhuravljov\widgets\DateTimePicker;
 
 ```php
 <?= $form->field($model, 'attribute')->widget(DateTimePicker::className(), [
-    'options' => ['class' => 'form-control'],
     'clientOptions' => [
         'format' => 'dd.mm.yyyy hh:ii',
         'language' => 'ru',
@@ -79,7 +77,6 @@ use zhuravljov\widgets\DateRangePicker;
 
 ```php
 <?= $form->field($model, 'actual_time')->widget(DateRangePicker::className(), [
-    'options' => ['class' => 'form-control'],
     'clientOptions' => [
         'ranges' => [
             'Today' => [

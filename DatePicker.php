@@ -20,7 +20,10 @@ class DatePicker extends InputWidget
     /**
      * @var array the HTML attributes for the input tag.
      */
-    public $options = [];
+    public $options = [
+        'class' => 'form-control',
+        'autocomplete' => 'off',
+    ];
     /**
      * @var array options for datepicker
      */
