@@ -2,27 +2,28 @@
 
 namespace zhuravljov\yii\widgets;
 
+use yii\bootstrap\BootstrapAsset;
 use yii\web\AssetBundle;
+use yii\web\JqueryAsset;
 
 /**
  * Class DateTimePickerAsset
  *
  * @author Roman Zhuravlev <zhuravljov@gmail.com>
  *
- * @see https://github.com/smalot/bootstrap-datetimepicker/tree/2.3.4
+ * @see https://github.com/smalot/bootstrap-datetimepicker/blob/master/bower.json
  */
 class DateTimePickerAsset extends AssetBundle
 {
-    public $sourcePath = '@zhuravljov/yii/widgets/assets';
+    public $sourcePath = '@bower/smalot-bootstrap-datetimepicker';
     public $js = [
         'js/bootstrap-datetimepicker.js',
-        'js/bootstrap-datetimepicker.i18n.js',
     ];
     public $css = [
-        'css/bootstrap3-datetimepicker.css',
+        'css/bootstrap-datetimepicker.css',
     ];
     public $depends = [
-        'yii\web\JqueryAsset',
-        'yii\bootstrap\BootstrapAsset',
+        JqueryAsset::class,
+        BootstrapAsset::class,
     ];
 }

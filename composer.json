@@ -17,6 +17,7 @@
         "yiisoft/yii2": "~2.0.0",
         "yiisoft/yii2-bootstrap": "~2.0.0",
         "bower-asset/bootstrap-datepicker": "*",
+        "bower-asset/smalot-bootstrap-datetimepicker": "*",
         "bower-asset/moment": "*",
         "bower-asset/bootstrap-daterangepicker": "*"
     },

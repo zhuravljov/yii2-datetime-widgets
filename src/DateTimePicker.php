@@ -51,7 +51,11 @@ class DateTimePicker extends InputWidget
         echo strtr($this->template, ['{input}' => $input]);
 
         $view = $this->getView();
-        DateTimePickerAsset::register($view);
+        $asset = DateTimePickerAsset::register($view);
+        if (isset($this->clientOptions['language'])) {
+            $lang = $this->clientOptions['language'];
+            $view->registerJsFile($asset->baseUrl . "/js/locales/bootstrap-datetimepicker.$lang.js", ['depends' => DateTimePickerAsset::class]);
+        }
 
         $id = $this->options['id'];
         $options = empty($this->clientOptions) ? '' : Json::encode($this->clientOptions);
