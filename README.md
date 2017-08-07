@@ -17,16 +17,12 @@ to the require section of your application's `composer.json` file.
 DatePicker
 ----------
 
-[Demo](http://eternicode.github.io/bootstrap-datepicker/) from the bootstrap-datepicker plugin website.
+[Demo](https://uxsolutions.github.io/bootstrap-datepicker) from the bootstrap-datepicker plugin website.
 
 ### Usage
 
 ```php
-use zhuravljov\yii\widgets\DatePicker;
-```
-
-```php
-<?= $form->field($model, 'attribute')->widget(DatePicker::className(), [
+<?= $form->field($model, 'attribute')->widget(DatePicker::class, [
     'clientOptions' => [
         'format' => 'dd.mm.yyyy',
         'language' => 'ru',
@@ -37,8 +33,6 @@ use zhuravljov\yii\widgets\DatePicker;
 ]) ?>
 ```
 
-For more details, please check the [bootstrap-datepicker plugin](http://bootstrap-datepicker.readthedocs.org/en/latest/) website.
-
 DateTimePicker
 --------------
 
@@ -48,11 +42,7 @@ DateTimePicker
 ### Usage
 
 ```php
-use zhuravljov\yii\widgets\DateTimePicker;
-```
-
-```php
-<?= $form->field($model, 'attribute')->widget(DateTimePicker::className(), [
+<?= $form->field($model, 'attribute')->widget(DateTimePicker::class, [
     'clientOptions' => [
         'format' => 'dd.mm.yyyy hh:ii',
         'language' => 'ru',
@@ -62,8 +52,6 @@ use zhuravljov\yii\widgets\DateTimePicker;
 ]) ?>
 ```
 
-For more details, please check the [bootstrap-datetimepicker plugin](http://www.malot.fr/bootstrap-datetimepicker/index.php) website.
-
 DateRangePicker
 ---------------
 
@@ -72,11 +60,7 @@ DateRangePicker
 ### Usage
 
 ```php
-use zhuravljov\yii\widgets\DateRangePicker;
-```
-
-```php
-<?= $form->field($model, 'actual_time')->widget(DateRangePicker::className(), [
+<?= $form->field($model, 'actual_time')->widget(DateRangePicker::class, [
     'clientOptions' => [
         'locale' => [
             'format' => 'YYYY-MM-DD',
@@ -96,5 +80,3 @@ use zhuravljov\yii\widgets\DateRangePicker;
     'clientEvents' => [],
 ]) ?>
 ```
-
-For more details, please check the [bootstrap-daterangepicker plugin](https://github.com/dangrossman/bootstrap-daterangepicker) repo.

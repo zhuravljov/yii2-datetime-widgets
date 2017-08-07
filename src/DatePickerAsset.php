@@ -2,27 +2,28 @@
 
 namespace zhuravljov\yii\widgets;
 
+use yii\bootstrap\BootstrapAsset;
 use yii\web\AssetBundle;
+use yii\web\JqueryAsset;
 
 /**
  * Class DatePickerAsset
  *
  * @author Roman Zhuravlev <zhuravljov@gmail.com>
  *
- * @see https://github.com/eternicode/bootstrap-datepicker/tree/v1.4.0
+ * @see https://github.com/uxsolutions/bootstrap-datepicker/blob/master/bower.json
  */
 class DatePickerAsset extends AssetBundle
 {
-    public $sourcePath = '@zhuravljov/yii/widgets/assets';
+    public $sourcePath = '@bower/bootstrap-datepicker/dist';
     public $js = [
         'js/bootstrap-datepicker.js',
-        'js/bootstrap-datepicker.i18n.js',
     ];
     public $css = [
-        'css/bootstrap3-datepicker.css',
+        'css/bootstrap-datepicker3.css',
     ];
     public $depends = [
-        'yii\web\JqueryAsset',
-        'yii\bootstrap\BootstrapAsset',
+        JqueryAsset::class,
+        BootstrapAsset::class,
     ];
 }
