@@ -67,7 +67,7 @@ For more details, please check the [bootstrap-datetimepicker plugin](http://www.
 DateRangePicker
 ---------------
 
-[Demo](http://www.dangrossman.info/2012/08/20/a-date-range-picker-for-twitter-bootstrap/) from the bootstrap-daterangepicker plugin website.
+[Demo](http://www.daterangepicker.com) from the bootstrap-daterangepicker plugin website.
 
 ### Usage
 
@@ -78,18 +78,20 @@ use zhuravljov\yii\widgets\DateRangePicker;
 ```php
 <?= $form->field($model, 'actual_time')->widget(DateRangePicker::className(), [
     'clientOptions' => [
+        'locale' => [
+            'format' => 'YYYY-MM-DD',
+            'separator' => ' - ',
+        ],
         'ranges' => [
             'Today' => [
                 new JsExpression('moment()'),
                 new JsExpression('moment()'),
             ],
             'Yesterday' => [
-                new JsExpression('moment().subtract("days", 1)'),
-                new JsExpression('moment().subtract("days", 1)'),
+                new JsExpression('moment().subtract(1, "days")'),
+                new JsExpression('moment().subtract(1, "days")'),
             ],
         ],
-        'format' => 'DD.MM.YYYY',
-        'separator' => ' - ',
     ],
     'clientEvents' => [],
 ]) ?>

@@ -2,27 +2,29 @@
 
 namespace zhuravljov\yii\widgets;
 
+use yii\bootstrap\BootstrapAsset;
 use yii\web\AssetBundle;
+use yii\web\JqueryAsset;
 
 /**
  * Class DateRangePickerAsset
  *
  * @author Roman Zhuravlev <zhuravljov@gmail.com>
  *
- * @see https://github.com/dangrossman/bootstrap-daterangepicker/tree/v1.3.21
+ * @see https://github.com/dangrossman/bootstrap-daterangepicker
  */
 class DateRangePickerAsset extends AssetBundle
 {
-    public $sourcePath = '@zhuravljov/yii/widgets/assets';
+    public $sourcePath = '@bower/bootstrap-daterangepicker';
     public $js = [
-        'js/bootstrap-daterangepicker.js'
+        'moment.js',
+        'daterangepicker.js',
     ];
     public $css = [
-        'css/bootstrap3-daterangepicker.css',
+        'daterangepicker.css',
     ];
     public $depends = [
-        'yii\web\JqueryAsset',
-        'yii\bootstrap\BootstrapAsset',
-        'zhuravljov\yii\widgets\MomentAsset',
+        JqueryAsset::class,
+        BootstrapAsset::class,
     ];
 }

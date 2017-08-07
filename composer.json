@@ -13,9 +13,18 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "yiisoft/yii2": "*",
-        "bower-asset/moment": "2.*"
+        "php": ">=5.5.0",
+        "yiisoft/yii2": "~2.0.0",
+        "yiisoft/yii2-bootstrap": "~2.0.0",
+        "bower-asset/moment": "*",
+        "bower-asset/bootstrap-daterangepicker": "*"
     },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "zhuravljov\\yii\\widgets\\": "src"
