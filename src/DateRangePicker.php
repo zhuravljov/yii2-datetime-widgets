@@ -43,15 +43,7 @@ class DateRangePicker extends InputWidget
 
     public function run()
     {
-        if ($this->hasModel()) {
-            $input = Html::activeTextInput($this->model, $this->attribute, $this->options);
-        } else {
-            $input = Html::textInput($this->name, $this->value, $this->options);
-        }
-        echo strtr($this->template, ['{input}' => $input]);
-
-        $view = $this->getView();
-        DateRangePickerAsset::register($view);
+        DateRangePickerAsset::register($this->view);
 
         $id = $this->options['id'];
         $options = empty($this->clientOptions) ? '' : Json::encode($this->clientOptions);
@@ -59,6 +51,12 @@ class DateRangePicker extends InputWidget
         foreach ($this->clientEvents as $event => $handler) {
             $js .= ".on('$event', $handler)";
         }
-        $view->registerJs($js . ';');
+        $this->view->registerJs($js . ';');
+
+        return strtr($this->template, [
+            '{input}' => $this->hasModel()
+                ? Html::activeTextInput($this->model, $this->attribute, $this->options)
+                : Html::textInput($this->name, $this->value, $this->options),
+        ]);
     }
 }

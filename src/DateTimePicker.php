@@ -43,18 +43,12 @@ class DateTimePicker extends InputWidget
 
     public function run()
     {
-        if ($this->hasModel()) {
-            $input = Html::activeTextInput($this->model, $this->attribute, $this->options);
-        } else {
-            $input = Html::textInput($this->name, $this->value, $this->options);
-        }
-        echo strtr($this->template, ['{input}' => $input]);
-
-        $view = $this->getView();
-        $asset = DateTimePickerAsset::register($view);
+        $asset = DateTimePickerAsset::register($this->view);
         if (isset($this->clientOptions['language'])) {
             $lang = $this->clientOptions['language'];
-            $view->registerJsFile($asset->baseUrl . "/js/locales/bootstrap-datetimepicker.$lang.js", ['depends' => DateTimePickerAsset::class]);
+            $this->view->registerJsFile($asset->baseUrl . "/js/locales/bootstrap-datetimepicker.$lang.js", [
+                'depends' => DateTimePickerAsset::class,
+            ]);
         }
 
         $id = $this->options['id'];
@@ -63,6 +57,12 @@ class DateTimePicker extends InputWidget
         foreach ($this->clientEvents as $event => $handler) {
             $js .= ".on('$event', $handler)";
         }
-        $view->registerJs($js . ';');
+        $this->view->registerJs($js . ';');
+
+        return strtr($this->template, [
+            '{input}' => $this->hasModel()
+                ? Html::activeTextInput($this->model, $this->attribute, $this->options)
+                : Html::textInput($this->name, $this->value, $this->options)
+        ]);
     }
 }
