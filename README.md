@@ -9,7 +9,7 @@ The preferred way to install this extension is through [composer](http://getcomp
 Add
 
 ```
-"zhuravljov/yii2-datetime-widgets" : "dev-master"
+"zhuravljov/yii2-datetime-widgets" : "~1.1.0"
 ```
 
 to the require section of your application's `composer.json` file.

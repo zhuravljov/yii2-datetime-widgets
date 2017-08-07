@@ -1,8 +1,7 @@
 {
     "name": "zhuravljov/yii2-datetime-widgets",
     "description": "Datetime widgets for Yii2.",
-    "keywords": ["yii", "extension", "widget", "datepicker", "datetimepicker", "daterangepicker"],
-    "homepage": "https://github.com/zhuravljov/yii2-datetime-widgets",
+    "keywords": ["yii", "widget", "datepicker", "datetimepicker", "daterangepicker"],
     "type": "yii2-extension",
     "license": "BSD-3-Clause",
     "authors": [
@@ -11,7 +10,6 @@
             "email": "zhuravljov@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
     "require": {
         "php": ">=5.5.0",
         "yiisoft/yii2": "~2.0.0",
