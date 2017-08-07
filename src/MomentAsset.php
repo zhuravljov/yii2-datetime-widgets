@@ -13,7 +13,7 @@ use yii\web\AssetBundle;
  */
 class MomentAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/bower/moment';
+    public $sourcePath = '@bower/moment';
 
     public function init()
     {

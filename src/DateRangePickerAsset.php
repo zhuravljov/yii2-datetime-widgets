@@ -13,7 +13,7 @@ use yii\web\AssetBundle;
  */
 class DateRangePickerAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/zhuravljov/yii2-datetime-widgets/assets';
+    public $sourcePath = '@zhuravljov/yii/widgets/assets';
     public $js = [
         'js/bootstrap-daterangepicker.js'
     ];
