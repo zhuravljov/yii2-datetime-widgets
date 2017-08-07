@@ -22,7 +22,7 @@ DatePicker
 ### Usage
 
 ```php
-use zhuravljov\widgets\DatePicker;
+use zhuravljov\yii\widgets\DatePicker;
 ```
 
 ```php
@@ -48,7 +48,7 @@ DateTimePicker
 ### Usage
 
 ```php
-use zhuravljov\widgets\DateTimePicker;
+use zhuravljov\yii\widgets\DateTimePicker;
 ```
 
 ```php
@@ -72,7 +72,7 @@ DateRangePicker
 ### Usage
 
 ```php
-use zhuravljov\widgets\DateRangePicker;
+use zhuravljov\yii\widgets\DateRangePicker;
 ```
 
 ```php

@@ -1,6 +1,6 @@
 <?php
 
-namespace zhuravljov\widgets;
+namespace zhuravljov\yii\widgets;
 
 use yii\helpers\Html;
 use yii\helpers\Json;

@@ -1,6 +1,6 @@
 <?php
 
-namespace zhuravljov\widgets;
+namespace zhuravljov\yii\widgets;
 
 use yii\web\AssetBundle;
 
@@ -23,6 +23,6 @@ class DateRangePickerAsset extends AssetBundle
     public $depends = [
         'yii\web\JqueryAsset',
         'yii\bootstrap\BootstrapAsset',
-        'zhuravljov\widgets\MomentAsset',
+        'zhuravljov\yii\widgets\MomentAsset',
     ];
 }
