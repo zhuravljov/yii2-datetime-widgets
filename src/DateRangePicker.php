@@ -7,46 +7,28 @@
 
 namespace zhuravljov\yii\widgets;
 
-use yii\helpers\Html;
 use yii\helpers\Json;
-use yii\widgets\InputWidget;
 
 /**
  * Class DateRangePicker
  *
  * @author Roman Zhuravlev <zhuravljov@gmail.com>
  */
-class DateRangePicker extends InputWidget
+class DateRangePicker extends DateWidget
 {
     /**
-     * @var string the template to render the input
-     */
-    public $template = '{input}';
-    /**
-     * @var array the HTML attributes for the input tag.
-     */
-    public $options = [
-        'class' => 'form-control',
-        'autocomplete' => 'off',
-    ];
-    /**
-     * @var array options for daterangepicker
+     * @var array options for js plugin
      */
     public $clientOptions = [];
     /**
-     * @var array events for daterangepicker
+     * @var array events for js plugin
      */
     public $clientEvents = [];
 
-    public function init()
-    {
-        parent::init();
-        if (!isset($this->options['id'])) {
-            $this->options['id'] = $this->hasModel() ? Html::getInputId($this->model, $this->attribute) : $this->getId();
-        }
-    }
-
-    public function run()
+    /**
+     * @inheritdoc
+     */
+    protected function registerPlugin()
     {
         DateRangePickerAsset::register($this->view);
 
@@ -57,11 +39,5 @@ class DateRangePicker extends InputWidget
             $js .= ".on('$event', $handler)";
         }
         $this->view->registerJs($js . ';');
-
-        return strtr($this->template, [
-            '{input}' => $this->hasModel()
-                ? Html::activeTextInput($this->model, $this->attribute, $this->options)
-                : Html::textInput($this->name, $this->value, $this->options),
-        ]);
     }
 }
