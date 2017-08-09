@@ -1,6 +1,9 @@
 Datetime widgets for Yii2
 =========================
 
+[![Latest Stable Version](https://poser.pugx.org/zhuravljov/yii2-datetime-widgets/version.svg)](https://packagist.org/packages/zhuravljov/yii2-datetime-widgets)
+[![Total Downloads](https://poser.pugx.org/zhuravljov/yii2-datetime-widgets/downloads.png)](https://packagist.org/packages/zhuravljov/yii2-datetime-widgets)
+
 Installation
 ------------
 
