@@ -22,7 +22,6 @@ class DateRangePickerAsset extends AssetBundle
 {
     public $sourcePath = '@bower/bootstrap-daterangepicker';
     public $js = [
-        'moment.js',
         'daterangepicker.js',
     ];
     public $css = [
@@ -31,5 +30,6 @@ class DateRangePickerAsset extends AssetBundle
     public $depends = [
         JqueryAsset::class,
         BootstrapAsset::class,
+        MomentAsset::class,
     ];
 }
